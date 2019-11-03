@@ -1,1 +1,15 @@
 # AudioProcessing
+# Processamento de áudio
+O aumento da densidade populacional em centros urbanos traz consigo diversos desafios, entre eles o monitoramento de espaços públicos. Neste contexto, o som surge como uma importante fonte de informação a respeito da vida urbana e o monitoramento acústico como uma alternativa de baixo-custo e robusta. No entanto, a análise e compreensão de cenas acústicas é uma tarefa desafiadora devido a alta heterogeneidade dos sons presentes no ambiente, bem como, a sobreposição dos mesmos. As Redes Neurais Convolucionais (CNNs) vem sendo aplicadas com sucesso na tarefa de classificação de cenários urbanos como um extrator de características de áudio empregado na etapa de classificação.
+Um importante fator que impulsiona a utilização de áudio como uma rica fonte de informações, é a ampla utilização de _smartphones_ com microfones. Além disso, os microfones são menos suscetíveis a interferências como, neblina, poluição, mudanças de luminosidade, entre outro fatores. Também exige menos bateria nos dispositivos envolvidos. 
+
+# Passos importantes 
+A metodologia proposta para a classificação de eventos sonoros conta com cinco etapas: 
+1. Aquisição de dados, consiste na obtenção dos sinais de áudio obtidos através de base de dados pública;  
+2. Pré-processamento, onde os dados serão uniformizados,aumentados e representados em diferentes domínios que serão empregados na etapa 3;
+3. Extração de Características, nesta etapa temos o aprendizado de características por meio de uma CNN é treinada com espectrogramas dos áudios a fim de extrair características relevantes da representação do sinal e gerar um descritor. De posse do descritor, é possível aplicá-lo diretamente na etapa 4; 
+4. Classificação, onde o classificador que será responsável por associar cada áudio a uma classe de evento sonoro. 
+5. Validação, que será utilizada para avaliar se o descritor gerado pode se utilizado pelo método de classificação para detectar as classes de eventos sonoros de maneira acurada.
+
+# Aquisição de dados
+O desempenho dos métodos de classificação depende diretamente da qualidade e da quantidade dos dados utilizados para treinar e testar os algoritmos. Uma maneira de iniciar o desenvolvimento do processo de classificação de sinais de áudio é obter os eventos sonoros a partir de base de dados ao invés de capturar manualmente os áudios. Portanto, os áudios bem como a anotação da classe à qual ele pertence foram retirados da base pública de dados chamada UrbanSound8. Essa base conta com 8732 áudios com duração inferior ou igual a 4 segundos rotulados em 10 classes distintas: ar condicionado, buzina de carro, crianças brincando, latido de cachorro, furadeira, motor de veículo, tiro, britadeira, sirene e música de rua. Com exceção das classes crianças brincando e tiros, todas as outras classes foram selecionadas devido a alta frequência em que aparecem no serviço de reclamações de ruído urbano 311 da cidade de Nova York, nos Estados Unidos da América do Norte
