@@ -18,7 +18,7 @@ A metodologia proposta para a classificação de eventos sonoros conta com cinco
 
 Segue a lista de bibliotecas necessárias para a execução da metodologia:
 
-[JAMS](https://pypi.org/project/jams/)
+[JAMS](https://pypi.org/project/jams/) para v0.3.2
 
   ```pip install jams ```
 
@@ -26,7 +26,7 @@ Segue a lista de bibliotecas necessárias para a execução da metodologia:
 
    ```pip install librosa ```
    
-[MUDA](https://muda.readthedocs.io/en/latest/)
+[MUDA](https://muda.readthedocs.io/en/latest/) para v0.2.0
  
   ```pip install muda ```
   
